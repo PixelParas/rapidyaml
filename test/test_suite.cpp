@@ -54,7 +54,7 @@ struct Events
         _nfo_logf("SRC:\n{}", actual_src);
         _nfo_print_tree("EXPECTED", tree);
         _nfo_print_tree("ACTUAL", actual_tree);
-        test_compare(tree, actual_tree);
+        test_compare(actual_tree, tree);
     }
 
     EventsParser parser;
@@ -188,7 +188,7 @@ struct ProcLevel
         c4::print("PREV:"); print_tree(prev.tree);
         c4::print("CURR:"); print_tree(tree);
         #endif
-        test_compare(tree, prev.tree);
+        test_compare(prev.tree, tree);
     }
 
     void compare_emitted(ProcLevel const& prev)

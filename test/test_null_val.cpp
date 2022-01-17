@@ -128,7 +128,7 @@ TEST(null_val, issue103)
     ASSERT_EQ(tree.size(), 2u);
     EXPECT_EQ(tree.root_id(), 0u);
     EXPECT_EQ(tree.first_child(0), 1u);
-    EXPECT_EQ((type_bits)tree.type(1), (type_bits)(KEY|VAL));
+    EXPECT_TRUE(tree.type(1).is_keyval());
     EXPECT_EQ(tree.key(1), "test");
     EXPECT_EQ(tree.val(1), nullptr);
     _check_null_pointing_at(tree.val(1), "null", tree.arena());
@@ -137,7 +137,7 @@ TEST(null_val, issue103)
     ASSERT_EQ(tree.size(), 2u);
     EXPECT_EQ(tree.root_id(), 0u);
     EXPECT_EQ(tree.first_child(0), 1u);
-    EXPECT_EQ((type_bits)tree.type(1), (type_bits)(KEY|VAL));
+    EXPECT_TRUE(tree.type(1).is_keyval());
     EXPECT_EQ(tree.key(1), "test");
     EXPECT_EQ(tree.val(1), nullptr);
     _check_null_pointing_at(tree.val(1), "Null", tree.arena());
@@ -146,7 +146,7 @@ TEST(null_val, issue103)
     ASSERT_EQ(tree.size(), 2u);
     EXPECT_EQ(tree.root_id(), 0u);
     EXPECT_EQ(tree.first_child(0), 1u);
-    EXPECT_EQ((type_bits)tree.type(1), (type_bits)(KEY|VAL));
+    EXPECT_TRUE(tree.type(1).is_keyval());
     EXPECT_EQ(tree.key(1), "test");
     EXPECT_EQ(tree.val(1), nullptr);
     _check_null_pointing_at(tree.val(1), "NULL", tree.arena());
@@ -155,7 +155,7 @@ TEST(null_val, issue103)
     ASSERT_EQ(tree.size(), 2u);
     EXPECT_EQ(tree.root_id(), 0u);
     EXPECT_EQ(tree.first_child(0), 1u);
-    EXPECT_EQ((type_bits)tree.type(1), (type_bits)(KEY|VAL));
+    EXPECT_TRUE(tree.type(1).is_keyval());
     EXPECT_EQ(tree.key(1), "test");
     EXPECT_EQ(tree.val(1), nullptr);
     _check_null_pointing_at(tree.val(1), " }", tree.arena());
@@ -164,7 +164,7 @@ TEST(null_val, issue103)
     ASSERT_EQ(tree.size(), 2u);
     EXPECT_EQ(tree.root_id(), 0u);
     EXPECT_EQ(tree.first_child(0), 1u);
-    EXPECT_EQ((type_bits)tree.type(1), (type_bits)(KEY|VAL));
+    EXPECT_TRUE(tree.type(1).is_keyval());
     EXPECT_EQ(tree.key(1), "test");
     EXPECT_EQ(tree.val(1), nullptr);
     _check_null_pointing_at(tree.val(1), "~", tree.arena());
@@ -173,7 +173,7 @@ TEST(null_val, issue103)
     ASSERT_EQ(tree.size(), 2u);
     EXPECT_EQ(tree.root_id(), 0u);
     EXPECT_EQ(tree.first_child(0), 1u);
-    EXPECT_EQ((type_bits)tree.type(1), (type_bits)(KEY|VAL));
+    EXPECT_TRUE(tree.type(1).is_keyval());
     EXPECT_EQ(tree.key(1), "test");
     EXPECT_EQ(tree.val(1), "~");
     EXPECT_NE(tree.val(1), nullptr);
@@ -182,7 +182,7 @@ TEST(null_val, issue103)
     ASSERT_EQ(tree.size(), 2u);
     EXPECT_EQ(tree.root_id(), 0u);
     EXPECT_EQ(tree.first_child(0), 1u);
-    EXPECT_EQ((type_bits)tree.type(1), (type_bits)(KEY|VAL));
+    EXPECT_TRUE(tree.type(1).is_keyval());
     EXPECT_EQ(tree.key(1), "test");
     EXPECT_EQ(tree.val(1), "null");
     EXPECT_NE(tree.val(1), nullptr);
@@ -191,7 +191,7 @@ TEST(null_val, issue103)
     ASSERT_EQ(tree.size(), 2u);
     EXPECT_EQ(tree.root_id(), 0u);
     EXPECT_EQ(tree.first_child(0), 1u);
-    EXPECT_EQ((type_bits)tree.type(1), (type_bits)(KEY|VAL));
+    EXPECT_TRUE(tree.type(1).is_keyval());
     EXPECT_EQ(tree.key(1), "test");
     EXPECT_EQ(tree.val(1), "Null");
     EXPECT_NE(tree.val(1), nullptr);
@@ -200,7 +200,7 @@ TEST(null_val, issue103)
     ASSERT_EQ(tree.size(), 2u);
     EXPECT_EQ(tree.root_id(), 0u);
     EXPECT_EQ(tree.first_child(0), 1u);
-    EXPECT_EQ((type_bits)tree.type(1), (type_bits)(KEY|VAL));
+    EXPECT_TRUE(tree.type(1).is_keyval());
     EXPECT_EQ(tree.key(1), "test");
     EXPECT_EQ(tree.val(1), "NULL");
     EXPECT_NE(tree.val(1), nullptr);

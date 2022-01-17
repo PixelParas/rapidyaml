@@ -478,9 +478,9 @@ R"(
 aaa: |2
   xxx
 bbb: |
-  xxx
+  yyy
 )",
-  L{N(QV, "aaa", "xxx\n"), N(QV, "bbb", "xxx\n")}
+  L{N(QV, "aaa", "xxx\n"), N(QV, "bbb", "yyy\n")}
     ),
 
 C("block literal with same indentation level 1",
@@ -488,9 +488,9 @@ R"(
 - aaa: |2
     xxx
   bbb: |
-    xxx
+    yyy
 )",
-  L{N(L{N(QV, "aaa", "xxx\n"), N(QV, "bbb", "xxx\n")})}
+  L{N(L{N(QV, "aaa", "xxx\n"), N(QV, "bbb", "yyy\n")})}
     ),
 
     )
